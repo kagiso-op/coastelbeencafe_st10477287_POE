@@ -1,0 +1,101 @@
+:root {
+  --bg: #1b1b1b;
+  --card: #242424;
+  --text: #f8f8f8;
+  --muted: #b0b0b0;
+  --accent: #f5b14c;
+  --radius: 14px;
+  --ff: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+}
+body {
+  font-family: var(--ff);
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url('images/logo.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 12px var(--accent);
+}
+h1, h2, h3 {
+  color: var(--accent);
+  margin-top: 0;
+  letter-spacing: 0.5px;
+}
+p, li {
+  color: var(--text);
+}
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  margin: 0 10px;
+  font-weight: 600;
+  position: relative;
+}
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 10px rgba(245, 177, 76, 0.1);
+  margin-bottom: 24px;
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 0 15px rgba(245, 177, 76, 0.3);
+}
+button, input, textarea {
+  background: #2c2c2c;
+  color: var(--text);
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+}
+button {
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: 0 0 10px var(--accent);
+}
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  font-size: 14px;
+}
